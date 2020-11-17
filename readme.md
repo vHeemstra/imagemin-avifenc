@@ -123,7 +123,7 @@ Synonym for **cicp**
 Type: `string`<br>
 Default: `full`
 
-YUV range ('full' or 'limited').
+YUV range (`full` or `limited`).
 
 ##### yuv
 
@@ -180,14 +180,14 @@ If the input file contains an embedded ICC profile, ignore it (no-op if absent).
 Type: `array` of 2 `number`s<br>
 Default: `null`
 
-Set aspect ratio: Horizontal spacing, Vertical spacing.
+Set aspect ratio. Order: Horizontal spacing, Vertical spacing.
 
 ##### clap
 
 Type: `array` of 8 `number`s<br>
 Default: `null`
 
-Set clean aperture: Width, Height, HOffset, VOffset (in num/denom pairs).
+Set clean aperture. Order: Width, Height, HOffset, VOffset (in num/denom pairs).
 
 ##### irot
 

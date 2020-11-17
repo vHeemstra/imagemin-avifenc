@@ -13,9 +13,9 @@ module.exports = options => buf => {
 	}
 
 	if (isJpg(buf)) {
-		let input_filename = tempfile('.jpg');
+		const input_filename = tempfile('.jpg');
 	} else if (isPng(buf)) {
-		let input_filename = tempfile('.png');
+		const input_filename = tempfile('.png');
 	} else {
 		return Promise.resolve(buf);
 	}

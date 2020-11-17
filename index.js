@@ -1,5 +1,6 @@
 'use strict';
 const execBuffer = require('exec-buffer');
+const tempfile = require('tempfile');
 const isJpg = require('is-jpg');
 const isPng = require('is-png');
 const avifenc = require('avifenc-bin');
@@ -11,7 +12,11 @@ module.exports = options => buf => {
 		return Promise.reject(new TypeError('Expected a buffer'));
 	}
 
-	if (!isJpg(buf) && !isPng(buf)) {
+	if (isJpg(buf)) {
+		let input_filename = tempfile('.jpg');
+	} else if (isPng(buf)) {
+		let input_filename = tempfile('.png');
+	} else {
 		return Promise.resolve(buf);
 	}
 
@@ -26,6 +31,8 @@ module.exports = options => buf => {
 
 	return execBuffer({
 		input: buf,
+		inputPath: input_filename,
+		outputPath: tempfile('.avif'),
 		bin: avifenc,
 		args
 	}).catch(error => {

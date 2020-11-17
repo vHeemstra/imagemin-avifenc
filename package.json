@@ -42,7 +42,8 @@
     "avifenc-bin": "git+https://github.com/vHeemstra/avifenc-bin.git",
     "exec-buffer": "^3.0.0",
     "is-jpg": "^2.0.0",
-    "is-png": "^2.0.0"
+    "is-png": "^2.0.0",
+    "tempfile": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^3.8.0",

@@ -2,8 +2,8 @@
 
 > AVIF encoding [imagemin](https://github.com/imagemin/imagemin) plugin using `avifenc` from [AOMedia's libavif](https://github.com/AOMediaCodec/libavif).
 
-***Note: At the moment this is for Windows only.<br>
-But if you are more familiar with Cmake and building binaries, feel free to make a pull request to complete the plugin!***
+***Note: At the moment, only Windows is supported.<br>
+But if you are more familiar with Cmake and building binaries, feel free to have a look at [AOMedia's libavif](https://github.com/AOMediaCodec/libavif) and send your binaries using pull requests to *this* repository!***
 
 
 ## Install

@@ -12,10 +12,11 @@ module.exports = options => buf => {
 		return Promise.reject(new TypeError('Expected a buffer'));
 	}
 
+	let input_filename = '';
 	if (isJpg(buf)) {
-		const input_filename = tempfile('.jpg');
+		input_filename = tempfile('.jpg');
 	} else if (isPng(buf)) {
-		const input_filename = tempfile('.png');
+		input_filename = tempfile('.png');
 	} else {
 		return Promise.resolve(buf);
 	}

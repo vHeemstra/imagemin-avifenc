@@ -22,7 +22,7 @@ module.exports = options => buf => {
 		args.push('--lossless');
 	}
 
-	args.push(execBuffer.input, '--output', execBuffer.output);
+	args.push('--output', execBuffer.output, execBuffer.input);
 
 	return execBuffer({
 		input: buf,

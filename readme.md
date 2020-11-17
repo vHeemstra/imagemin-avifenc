@@ -38,19 +38,12 @@ Returns a promise for a buffer.
 #### options
 
 ***TODO***
-##### progressive
+##### lossless
 
 Type: `boolean`<br>
 Default: `false`
 
-Lossless conversion to progressive.
-
-##### arithmetic
-
-Type: `boolean`<br>
-Default: `false`
-
-Use [arithmetic coding](http://en.wikipedia.org/wiki/Arithmetic_coding).
+Lossless conversion.
 
 #### buffer
 
@@ -61,5 +54,5 @@ Buffer to optimize.
 
 ## License
 
-MIT © [imagemin](https://github.com/imagemin)
+MIT © [imagemin](https://github.com/imagemin)<br>
 [libavif](https://github.com/AOMediaCodec/libavif) © 2019 Joe Drago (Released under the BSD License.)

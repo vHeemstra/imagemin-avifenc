@@ -12,13 +12,7 @@ module.exports = options => buf => {
 		return Promise.reject(new TypeError('Expected a buffer'));
 	}
 
-	// Check for valid input files and set the extension on the temp file (needed for avifenc to work)
-	let input_filename = '';
-	if (isJpg(buf)) {
-		input_filename = tempfile('.jpg');
-	} else if (isPng(buf)) {
-		input_filename = tempfile('.png');
-	} else {
+	if (!isJpg(buf) && !isPng(buf)) {
 		return Promise.resolve(buf);
 	}
 
@@ -143,8 +137,6 @@ module.exports = options => buf => {
 
 	return execBuffer({
 		input: buf,
-		inputPath: input_filename,
-		outputPath: tempfile('.avif'),
 		bin: avifenc,
 		args
 	}).catch(error => {

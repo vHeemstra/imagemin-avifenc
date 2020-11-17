@@ -2,6 +2,8 @@
 
 > unofficial (experimental) avifenc imagemin plugin, using `avifenc` from [AOMedia's libavif](https://github.com/AOMediaCodec/libavif).
 
+***Note: This is for Windows only (for now).***
+
 
 ## Install
 

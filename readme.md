@@ -214,12 +214,12 @@ Array or object containing codec-specific values or key/value pairs to pass dire
 For `aom` these can be:
 ```
 {
-	'aq-mode': ...,              // Adaptive quantization mode (0: off (default), 1: variance, 2: complexity, 3: cyclic refresh)
-	'cq-level': ...,             // Constant/Constrained Quality level (0-63, end-usage must be set to cq or q)
-	'enable-chroma-deltaq': ..., // Enable delta quantization in chroma planes (0: disable (default), 1: enable)
-	'end-usage': ...,            // Rate control mode (vbr, cbr, cq, or q)
-	'sharpness': ...,            // Loop filter sharpness (0-7, default: 0)
-	'tune': ...                  // Tune the encoder for distortion metric (psnr or ssim, default: psnr)
+  'aq-mode': ...,              // Adaptive quantization mode (0: off (default), 1: variance, 2: complexity, 3: cyclic refresh)
+  'cq-level': ...,             // Constant/Constrained Quality level (0-63, end-usage must be set to cq or q)
+  'enable-chroma-deltaq': ..., // Enable delta quantization in chroma planes (0: disable (default), 1: enable)
+  'end-usage': ...,            // Rate control mode (vbr, cbr, cq, or q)
+  'sharpness': ...,            // Loop filter sharpness (0-7, default: 0)
+  'tune': ...                  // Tune the encoder for distortion metric (psnr or ssim, default: psnr)
 }
 ```
 
@@ -233,4 +233,6 @@ Buffer to optimize.
 ## License
 
 MIT © [imagemin](https://github.com/imagemin)<br>
-[libavif](https://github.com/AOMediaCodec/libavif) © 2019 Joe Drago (Released under the BSD License.)
+[libavif](https://github.com/AOMediaCodec/libavif) © 2019 Joe Drago (Released under the BSD License.)<br>
+This package is made by [Philip van Heemstra](https://github.com/vHeemstra)<br>
+Based on [imagemin-jpegtran](https://github.com/imagemin/imagemin-jpegtran) by [Sindre Sorhus](https://github.com/sindresorhus)

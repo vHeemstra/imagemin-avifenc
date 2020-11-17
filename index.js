@@ -29,14 +29,14 @@ module.exports = options => buf => {
 		args.push('-d', options.depth);
 	}
 	if (typeof options.yuv === 'number') {
-		args.push('-y', options.jobs);
+		args.push('-y', options.yuv);
 	}
 	
-	if (typeof options.cicp === 'string') {
-		args.push('--cicp', options.cicp);
+	if (typeof options.cicp === 'object' && Array.isArray(options.cicp) && options.cicp.length == 3) {
+		args.push('--cicp', options.cicp.join('/'));
 	}
-	if (typeof options.nclx === 'string') {
-		args.push('--nclx', options.nclx);
+	if (typeof options.nclx === 'object' && Array.isArray(options.nclx) && options.nclx.length == 3) {
+		args.push('--nclx', options.nclx.join('/'));
 	}
 	if (typeof options.range === 'string') {
 		args.push('-r', options.range.substring(0,1).toLowerCase());
@@ -83,19 +83,19 @@ module.exports = options => buf => {
 	}
 
 	if (typeof options.advanced === 'object') {
-		if (Array.isArray(options.advanced)) {
-			options.advanced.forEach((v) => {
-				args.push('-a', v);
-			});
-		} else {
-			Object.keys(options.advanced).forEach((k) => {
-				if (typeof options.advanced[k] === 'number' || 0 < options.advanced[k].length) {
-					args.push('-a', k + "=" + options.advanced[k]);
-				} else {
-					args.push('-a', k);
-				}
-			});
-		}
+		Object.keys(options.advanced).forEach((k) => {
+			if (typeof options.advanced[k] === 'boolean') {
+				// args.push('-a', k + "=" + (options.advanced[k] ? '1' : '0'));
+				args.push('-a', k);
+			} else if (
+				typeof options.advanced[k] === 'number'
+				|| (typeof options.advanced[k] === 'string' && 0 < options.advanced[k].length)
+			) {
+				args.push('-a', k + "=" + options.advanced[k]);
+			} else {
+				args.push('-a', k);
+			}
+		});
 	}
 
 	if (typeof options.duration === 'number') {

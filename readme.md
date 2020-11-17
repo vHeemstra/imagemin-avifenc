@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save vheemstra/imagemin-avifenc
+$ npm install --save git+https://github.com/vHeemstra/imagemin-avifenc.git
 ```
 
 
@@ -14,7 +14,7 @@ $ npm install --save vheemstra/imagemin-avifenc
 
 ```js
 const imagemin = require('imagemin');
-const imageminAvifenc = require('vheemstra/imagemin-avifenc');
+const imageminAvifenc = require('imagemin-avifenc');
 
 (async () => {
 	await imagemin(['images/*.{jpg,jpeg,png}'], {

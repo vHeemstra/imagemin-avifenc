@@ -1,0 +1,52 @@
+{
+  "name": "imagemin-avifenc",
+  "version": "0.8.3",
+  "description": "avifenc imagemin plugin",
+  "license": "MIT",
+  "repository": "github:vheemstra/imagemin-avifenc",
+  "author": {
+    "name": "Philip van Heemstra",
+    "email": "vanheemstra@gmail.com",
+    "url": "vanheemstra.com"
+  },
+  "maintainers": [
+    {
+      "name": "Philip van Heemstra",
+      "email": "vanheemstra@gmail.com",
+      "url": "vanheemstra.com"
+    }
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "compress",
+    "image",
+    "imageminplugin",
+    "img",
+    "jpeg",
+    "jpg",
+    "png",
+    "minify",
+    "optimize",
+    "libavif",
+    "avifenc"
+  ],
+  "dependencies": {
+    "exec-buffer": "^3.0.0",
+    "is-jpg": "^2.0.0",
+    "is-png": "^2.0.0",
+    "vheemstra/avifenc-bin": "^0.8.3"
+  },
+  "devDependencies": {
+    "ava": "^3.8.0",
+    "is-progressive": "^3.0.0",
+    "xo": "^0.30.0"
+  }
+}

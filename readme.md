@@ -39,7 +39,10 @@ Returns a promise for a buffer.
 
 #### options
 
+For full option description, see [avifenc's syntax](https://github.com/AOMediaCodec/libavif/blob/master/apps/avifenc.c#L46)
+
 ***TODO***
+
 ##### lossless
 
 Type: `boolean`<br>

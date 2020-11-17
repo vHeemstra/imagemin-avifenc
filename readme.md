@@ -210,7 +210,7 @@ Set mirroring (`0` = vertical or `1` = horizontal). Default: no mirroring.
 Type: `object`<br>
 Default: `null`
 
-Array or object containing codec-specific values or key/value pairs to pass directly to the codec.<br>
+Object containing codec-specific key/value pairs to pass directly to the codec.<br>
 For `aom` these can be:
 ```
 {

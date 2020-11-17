@@ -39,10 +39,10 @@
     "avifenc"
   ],
   "dependencies": {
+    "@vheemstra/avifenc-bin": "^0.8.3",
     "exec-buffer": "^3.0.0",
     "is-jpg": "^2.0.0",
-    "is-png": "^2.0.0",
-    "vheemstra/avifenc-bin": "^0.8.3"
+    "is-png": "^2.0.0"
   },
   "devDependencies": {
     "ava": "^3.8.0",

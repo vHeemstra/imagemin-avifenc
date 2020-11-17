@@ -2,7 +2,7 @@
 const execBuffer = require('exec-buffer');
 const isJpg = require('is-jpg');
 const isPng = require('is-png');
-const avifenc = require('vheemstra/avifenc-bin');
+const avifenc = require('@vheemstra/avifenc-bin');
 
 module.exports = options => buf => {
 	options = {...options};

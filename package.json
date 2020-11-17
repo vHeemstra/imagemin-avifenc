@@ -39,7 +39,7 @@
     "avifenc"
   ],
   "dependencies": {
-    "@vheemstra/avifenc-bin": "^0.8.3",
+    "avifenc-bin": "git+https://github.com/vHeemstra/avifenc-bin.git",
     "exec-buffer": "^3.0.0",
     "is-jpg": "^2.0.0",
     "is-png": "^2.0.0"

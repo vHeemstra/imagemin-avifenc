@@ -10,7 +10,6 @@
   "bugs": {
     "url": "https://github.com/vHeemstra/imagemin-avifenc/issues"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": {
     "name": "Philip van Heemstra",
     "email": "vanheemstra@gmail.com",
@@ -46,7 +45,7 @@
     "avifenc"
   ],
   "dependencies": {
-    "avifenc-bin": "git+https://github.com/vHeemstra/avifenc-bin.git",
+    "@vheemstra/avifenc-bin": "^1.0.0",
     "exec-buffer": "^3.0.0",
     "is-jpg": "^2.0.0",
     "is-png": "^2.0.0",

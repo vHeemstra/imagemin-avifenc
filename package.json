@@ -1,19 +1,26 @@
 {
-  "name": "imagemin-avifenc",
+  "name": "@vheemstra/imagemin-avifenc",
   "version": "1.0.0",
   "description": "avifenc imagemin plugin",
   "license": "MIT",
-  "repository": "github:vheemstra/imagemin-avifenc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vHeemstra/imagemin-avifenc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vHeemstra/imagemin-avifenc/issues"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": {
     "name": "Philip van Heemstra",
     "email": "vanheemstra@gmail.com",
-    "url": "vanheemstra.com"
+    "url": "https://github.com/vheemstra"
   },
   "maintainers": [
     {
       "name": "Philip van Heemstra",
       "email": "vanheemstra@gmail.com",
-      "url": "vanheemstra.com"
+      "url": "https://github.com/vheemstra"
     }
   ],
   "engines": {

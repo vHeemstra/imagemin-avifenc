@@ -1,32 +1,21 @@
-const {promisify} = require('util');
-const fs = require('fs');
-const path = require('path');
-// const isJpg = require('is-jpg');
-// const isPng = require('is-png');
-const isProgressive = require('is-progressive');
-const test = require('ava');
-const m = require('.');
-
-const readFile = promisify(fs.readFile);
+import {promises as fs} from 'node:fs';
+// import isJpg from 'is-jpg';
+// import isPng from 'is-png';
+import test from 'ava';
+import imageminAvif from './index.js';
 
 // TODO: better testing
-test('convert a JPG', async t => {
-	const buf = await readFile(path.join(__dirname, 'fixture.jpg'));
-	const data = await m()(buf);
-	// t.true(data.length < buf.length);
+test('convert a JPG into AVIF', async t => {
+	const buffer = await fs.readFile(new URL('fixture.jpg', import.meta.url));
+	const data = await imageminAvif()(buffer);
+	// t.true(data.length < buffer.length);
 	// t.true(isJpg(data));
 	t.true(data.length > 0);
 });
 
 // test('throw error when a JPG is corrupt', async t => {
-// 	const buf = await readFile(path.join(__dirname, 'fixture-corrupt.jpg'));
+// 	const buffer = await fs.readFile(new URL('fixture-corrupt.jpg', import.meta.url));
 // 	await t.throwsAsync(async () => {
-// 		await m()(buf);
+// 		await imageminAvif()(buffer);
 // 	}, {message: /Corrupt JPEG data/});
-// });
-
-// test('progressive option', async t => {
-// 	const buf = await readFile(path.join(__dirname, 'fixture.jpg'));
-// 	const data = await m({progressive: true})(buf);
-// 	t.true(isProgressive.buffer(data));
 // });

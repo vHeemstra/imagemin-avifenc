@@ -4,7 +4,7 @@ import isJpg from 'is-jpg';
 import isPng from 'is-png';
 import avifenc from '@vheemstra/avifenc-bin';
 
-const imageminWebp = (options = {}) => input => {
+const imageminAvifenc = (options = {}) => input => {
 	options = {...options};
 
 	if (!Buffer.isBuffer(input)) {
@@ -40,12 +40,33 @@ const imageminWebp = (options = {}) => input => {
 		args.push('--sharpyuv');
 	}
 
-	if (typeof options.cicp === 'object' && Array.isArray(options.cicp) && options.cicp.length == 3) {
-		args.push('--cicp', options.cicp.join('/'));
+	if (typeof options.cicp === 'object') {
+		if (Array.isArray(options.cicp)) {
+			if (options.cicp.length === 3) {
+				args.push('--cicp', options.cicp.join('/'));
+			}
+		} else if (
+			Object.entries(options.cicp).filter(([k, v]) => {
+				return ['p', 't', 'm'].includes(k) && typeof v === 'number'
+			}).length >= 2
+		) {
+			args.push('--cicp', `${options.cicp.p}/${options.cicp.t}/${options.cicp.m}`);
+		}
 	}
-	if (typeof options.nclx === 'object' && Array.isArray(options.nclx) && options.nclx.length == 3) {
-		args.push('--nclx', options.nclx.join('/'));
+	if (typeof options.nclx === 'object') {
+		if (Array.isArray(options.nclx)) {
+			if (options.nclx.length === 3) {
+				args.push('--nclx', options.nclx.join('/'));
+			}
+		} else if (
+			Object.entries(options.nclx).filter(([k, v]) => {
+				return ['p', 't', 'm'].includes(k) && typeof v === 'number'
+			}).length >= 2
+		) {
+			args.push('--nclx', `${options.nclx.p}/${options.nclx.t}/${options.nclx.m}`);
+		}
 	}
+
 	if (typeof options.range === 'string') {
 		args.push('-r', options.range.substring(0,1).toLowerCase());
 	}
@@ -203,4 +224,4 @@ const imageminWebp = (options = {}) => input => {
 	});
 };
 
-export default imageminWebp;
+export default imageminAvifenc;

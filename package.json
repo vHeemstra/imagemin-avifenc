@@ -1,6 +1,6 @@
 {
   "name": "@vheemstra/imagemin-avifenc",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "avifenc imagemin plugin",
   "license": "MIT",
   "repository": {
@@ -24,6 +24,7 @@
   ],
   "type": "module",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
@@ -31,7 +32,8 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "compress",
@@ -48,7 +50,7 @@
     "avif"
   ],
   "dependencies": {
-    "@vheemstra/avifenc-bin": "^2.0.0",
+    "@vheemstra/avifenc-bin": "^2.0.1",
     "exec-buffer": "^3.2.0",
     "is-jpg": "^3.0.0",
     "is-png": "^3.0.1"

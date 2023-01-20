@@ -1,6 +1,6 @@
 {
   "name": "@vheemstra/imagemin-avifenc",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "avifenc imagemin plugin",
   "license": "MIT",
   "repository": {

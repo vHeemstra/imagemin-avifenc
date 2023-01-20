@@ -50,7 +50,7 @@
     "avif"
   ],
   "dependencies": {
-    "@vheemstra/avifenc-bin": "^2.0.1",
+    "@vheemstra/avifenc-bin": "^2.1.1",
     "exec-buffer": "^3.2.0",
     "is-jpg": "^3.0.0",
     "is-png": "^3.0.1"
